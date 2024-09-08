@@ -13,7 +13,7 @@ pipeline {
         stage('checkout'){
             steps {
                 //checkout code from version control
-                git branch: 'main' , credentialsID: 'github', url: 'https://github.com/SNS-Srinivasu/registeration-application.git'
+                git branch: 'main' , credentialsId: 'github', url: 'https://github.com/SNS-Srinivasu/registeration-application.git'
             }
         }
         stage('Build Application') {
