@@ -1,0 +1,50 @@
+pipeline {
+    agent { label 'jenkins-agent'}
+    tools {
+        jdk 'java17'
+        maven 'maven3'
+    }
+    stages {
+        stage('Clean Workspace'){
+            steps {
+                cleanWs()
+            }
+        }
+        stage('checkout'){
+            steps {
+                //checkout code from version control
+                git branch: 'main' , credentialsID: 'github', url: 'https://github.com/SNS-Srinivasu/registeration-application.git'
+            }
+        }
+        stage('Build Application') {
+            steps {
+                sh "mvn clean package"
+            }
+        }
+        stage('Test Application') {
+            steps {
+                sh "mvn test"
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo "deploy is complete"
+            }
+        }
+    }
+    post {
+        success {
+            // Action to take if the pipe line succeeds
+            echo 'Pipeline succeeded!'
+        }
+        failure {
+            // Action to take if the pipe line fails
+            echo 'Pipeline failed.'
+        }
+        always {
+            // Action to take if the pipe line success or failure
+            echo 'Pipeline completed.'
+        }
+
+    }
+}
