@@ -1,7 +1,7 @@
 <form action="action_page.php">
   <div class="container">
     <h1>NEW USER REGISTRATION FOR EYE CHECKUP </h1>
-    <p>Please fill the form to create an account</p>
+    <p>Please Fill the form to create an account</p>
     <hr>
      
     <label for="Name"><b>Enter Name</b></label>
