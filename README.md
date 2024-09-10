@@ -1,3 +1,9 @@
+
+# PIPELINE DIAGRAM
+
+<img width="1133" alt="Screenshot 2024-09-10 at 4 37 36 PM" src="https://github.com/user-attachments/assets/29bba66c-2825-48bc-baec-09c1d7926844">
+
+
 # ---------Continuous Integration (CI) Pipeline------------
 
 
@@ -6,7 +12,10 @@
  Agent: Runs in EC2 Jenkins agent.
  
  Tools: Configures JDK 17 and Maven 3 for the build.
- 
+
+<img width="1440" alt="jenkins master   agent" src="https://github.com/user-attachments/assets/19fb5611-3b67-4299-9837-9b9a9ddcfc8b">
+
+
 # Environment Variables
 
 1. APP_NAME: Name of the application.
@@ -36,6 +45,9 @@
 2. Failure: Logs a failure message.
 3. Always: Logs a completion message.
 
+<img width="1248" alt="continuous integration" src="https://github.com/user-attachments/assets/647ffd62-1f13-4867-8da4-634d8c128c24">
+
+
 
 # ----------Continuous Deployment (CD) Pipeline------------
 
@@ -49,4 +61,17 @@
     * Updates the deployment.yaml file with the new application version or tag. The sed command is used to replace the old tag with the new one.
 4. Push the Changed Deployment File to Git:
     * Configures Git with user details, commits the updated deployment.yaml file, and pushes the changes to the GitHub repository.
+ 
+ <img width="1440" alt="continuous deployment" src="https://github.com/user-attachments/assets/9998f794-3fa2-4cd1-a055-d2376d434177">
+
+# ArgoCD
+
+<img width="1440" alt="APP DETAILS TREE #ArgoCD" src="https://github.com/user-attachments/assets/34db96ab-08e9-40c4-8377-8ce93fb6ad76">
+
+
+# Application 
+
+<img width="1440" alt="registration-app" src="https://github.com/user-attachments/assets/9d8f9ff5-39e4-4601-b882-452571a4cc0e">
+
+
 
